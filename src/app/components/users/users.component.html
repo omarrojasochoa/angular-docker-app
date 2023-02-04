@@ -1,0 +1,37 @@
+<h2 class="text-center m-5">LISTA DE USUARIOS</h2>
+<div class="container">
+  <div class="row">
+    <table class="table align-middle" colspan="4">
+      <thead>
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">NAME</th>
+          <th scope="col">USERNAME</th>
+          <th scope="col">EMAIL</th>
+          <th scope="col">PHONE</th>
+          <th scope="col">WEBSITE</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let dat of data">
+          <th scope="row">{{ dat.id }}</th>
+          <td>
+            {{ dat.name }}
+          </td>
+          <td>
+            {{ dat.username }}
+          </td>
+          <td>
+            {{ dat.email }}
+          </td>
+          <td>
+            {{ dat.phone }}
+          </td>
+          <td>
+            {{ dat.website }}
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

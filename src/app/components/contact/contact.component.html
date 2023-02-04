@@ -1,0 +1,52 @@
+<div class="container">
+  <div class="row">
+    <div class="d-flex justify-content-center align-items-center my-5">
+      <div class="col-md-4 p-5 shadow-sm border rounded-5 border-primary">
+        <h2 class="text-center mb-4 text-dark">Formulario de Contacto</h2>
+        <form [formGroup]="formulario" (submit)="sendForm()">
+          <div class="mb-3">
+            <label for="exampleInputName" class="form-label">Nombre</label>
+            <input
+              formControlName="name"
+              type="text"
+              class="form-control bg-info bg-opacity-10 border border-primary"
+              id="exampleInputName"
+              required
+            />
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Correo</label>
+            <input
+              formControlName="email"
+              type="text"
+              class="form-control bg-info bg-opacity-10 border border-primary"
+              id="exampleInputEmail1"
+              required
+            />
+          </div>
+          <div class="mb-3">
+            <label for="mensaje" class="form-label">Mensaje</label>
+            <textarea
+              formControlName="mensaje"
+              type="text"
+              class="form-control bg-info bg-opacity-10 border border-primary"
+              id="mensaje"
+              required
+            ></textarea>
+          </div>
+
+          <div class="d-grid">
+            <button class="btn btn-primary" type="submit">
+              <!-- (click)="onSubmit()" -->
+              ENVIAR
+            </button>
+          </div>
+
+          <p class="text-center" *ngIf="isCheck">
+            <b>Datos Enviados: {{ isCheck | json }}</b>
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

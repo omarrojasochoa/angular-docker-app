@@ -1,0 +1,36 @@
+<div class="container">
+  <div class="row">
+    <div class="d-flex justify-content-center align-items-center my-5">
+      <div class="col-md-4 p-5 shadow-sm border rounded-5 border-primary">
+        <h1 class="m-5 text-center mb-4 text-dark">Proyecto DevOps.</h1>
+        <form>
+          <div class="mb-3">
+            <input
+              class="form-control bg-info bg-opacity-10 border border-primary"
+              type="number"
+              [(ngModel)]="num1"
+              name="num1"
+            />
+          </div>
+          <div class="mb-3">
+            <input
+              class="form-control bg-info bg-opacity-10 border border-primary"
+              type="number"
+              [(ngModel)]="num2"
+              name="num2"
+            />
+          </div>
+          <div class="d-grid">
+            <button class="btn btn-primary" (click)="sumar()">Sumar</button>
+          </div>
+        </form>
+        <h3 class="text-center mb-4 text-dark">
+          El resultado es: {{ resultado }}
+        </h3>
+        <h3 class="text-center mb-4 text-dark" *ngIf="resultado">
+          El resultado es: {{ resultado }}
+        </h3>
+      </div>
+    </div>
+  </div>
+</div>
